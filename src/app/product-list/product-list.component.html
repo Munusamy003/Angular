@@ -1,0 +1,26 @@
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+<div *ngFor="let p of product">
+
+  <div class="card" style="width: 18rem;" class="border-0 m-4">
+    <img [src]="p.image" 
+          class="card-img-top" 
+          alt="..." 
+          [title]="p.name"
+          [ngStyle]="imgstyle" 
+          [style.width.px]=250
+    [style.height.px]=250>
+          
+          <br>
+    <div class="card-body">
+      <h5 class="card-title"
+          [ngStyle]="titlestyle" >{{p.name}}</h5>
+      <p class="card-text" [style.color]="'blue'">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque officiis aperiam modi ipsam, veniam delectus expedita possimus quia asperiores consequatur maxime, eos facilis. Ratione, temporibus repudiandae quisquam vitae consequatur hic?</p>
+      <strong [style.fontSize.em]="2">{{p.price}}</strong><br>
+      <button type="button" class="btn btn-primary">Add To Cart</button>
+    </div>
+  </div>
+ 
+    
+  </div>
+</div>
